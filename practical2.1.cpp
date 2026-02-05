@@ -2,20 +2,20 @@
 using namespace std;
 class rectangle
 {
-  double lenght;
-  double width;
-  public:
-      double area();
-      double perimeter();
-      void setd(double,double);
+    double lenght;
+    double width;
+public:
+    double area();
+    double perimeter();
+    void setd(double,double);
 };
 void rectangle::setd(double l,double w)
 {
     if(l>0&&w>0)
     {
 
-    lenght=l;
-    width=w;
+        lenght=l;
+        width=w;
     }
     else
         cout<<"Invalid input";
@@ -31,19 +31,19 @@ double rectangle::perimeter()
 int main()
 {
     int n,i;
-    cout<<"Enter number of rectanglen you want";
+    cout<<"Enter number of rectangles you want: ";
     cin>>n;
     rectangle a[n];
     double l,w;
-   for(i=0;i<n;i++)
-   {
-        cout<<"Enter length and width of the rectangle";
-    cin>>l>>w;
-    a[i].setd(l,w);
-    double Area=a[i].area();
-    double Perimeter=a[i].perimeter();
-    cout<<"Area of the rectangle is :"<<Area<<endl;
-    cout<<"Perimeter of the rectangle is :"<<Perimeter<<endl;
-   }
-   return 0;
+    for(i=0; i<n; i++)
+    {
+        cout<<"Enter length and width of the rectangle "<<i+1<<" : ";
+        cin>>l>>w;
+        a[i].setd(l,w);
+        double Area=a[i].area();
+        double Perimeter=a[i].perimeter();
+        cout<<"Area of the rectangle is "<<i+1<<" : "<<Area<<endl;
+        cout<<"Perimeter of the rectangle is "<<i+1<<" : "<<Perimeter<<endl;
+    }
+    return 0;
 }
