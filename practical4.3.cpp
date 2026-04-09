@@ -5,10 +5,16 @@ int main()
 {
     int n, m;
     int i,j;
+    N:
     cout << "Enter Total elements in first array: ";
     cin >> n;
     cout << "Enter total elements in second array: ";
     cin >> m;
+    if(n==0||m==0)
+    {
+        cout<<"Enter correct values"<<endl;
+        goto N;
+    }
     int *p1 = new int[n];
     int *p2 = new int[m];
     cout << "Enter elements of first array: ";
